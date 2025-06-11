@@ -1,0 +1,245 @@
+.container {
+  background-color: var(--color-bg-catalog);
+  padding: 2rem;
+  min-height: 100vh;
+  color: var(--color-text);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-title);
+  gap: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.listItem {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  background: var(--color-bg-card);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 10px rgb(184 90 215 / 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgb(228 148 255 / 0.3);
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.itemInfo strong {
+  font-weight: 700;
+  color: var(--color-main);
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.15rem;
+}
+
+.quantityInput {
+  width: 60px;
+  margin-left: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid var(--color-main);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background: transparent;
+  transition: border-color 0.25s ease;
+}
+
+.quantityInput:focus {
+  outline: none;
+  border-color: var(--color-main-gradient);
+  box-shadow: 0 0 8px var(--color-main-gradient);
+}
+
+.removeButton {
+  margin-left: 1rem;
+  height: 36px;
+  padding: 0 12px;
+  border: none;
+  background: var(--color-main-gradient);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.removeButton:hover {
+  background: var(--color-main);
+}
+
+.totalSection {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-main-gradient);
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.payButton {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-radius: 12px;
+  border: none;
+  background: var(--color-main-gradient);
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.payButton:hover {
+  background: var(--color-main);
+}
+
+.backButton {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: none;
+  background: var(--color-main-gradient);
+  color: white;
+  cursor: pointer;
+  align-self: flex-start;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background: var(--color-main);
+}
+
+.empty {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-text-hover);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Responsive para Cart */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .listItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .itemImage {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .itemInfo {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .quantityInput {
+    width: 50px;
+  }
+
+  .removeButton {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .totalSection {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .payButton {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    align-self: stretch;
+  }
+
+  .backButton {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.6rem;
+    justify-content: center;
+  }
+
+  .itemInfo strong {
+    font-size: 1rem;
+  }
+
+  .quantityInput {
+    width: 40px;
+  }
+
+  .removeButton {
+    font-size: 0.9rem;
+  }
+
+  .payButton,
+  .backButton {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}

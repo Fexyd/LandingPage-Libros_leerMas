@@ -1,0 +1,38 @@
+/* success.module.css */
+.container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-catalog);
+  color: var(--color-text);
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-main);
+  margin-bottom: 1rem;
+}
+
+.message {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background: var(--color-main-gradient);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background: var(--color-main);
+}

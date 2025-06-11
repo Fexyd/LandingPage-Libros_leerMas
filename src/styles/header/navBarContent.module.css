@@ -1,0 +1,70 @@
+.navBar_content {
+  background-color: var(--color-main);
+  z-index: 1500;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Espacia título y nav + logo */
+  padding: 0 1rem; /* Espacio lateral */
+  transition: background-color 0.5s ease;
+
+  animation-name: navBar;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  animation-timeline: scroll();
+}
+
+.navBar_content > h1 {
+  font-family: "inter";
+  margin: 0;
+  flex-grow: 1;
+}
+
+.span {
+  font-family: "cursive", "montserrat", "inter", sans-serif;
+  font-size: 3rem;
+}
+
+/* Ajustes para la imagen logo */
+.logoCarrito {
+  --tamaño: 64px;
+  width: var(--tamaño);
+  height: var(--tamaño);
+  margin-left: 1rem; /* Más espacio a la izquierda */
+  margin-right: 0; /* Opcional, quita si sobra */
+  align-self: center; /* Centrado vertical en flexbox */
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 2px #fff2);
+}
+
+/* hover solo si quieres */
+.logoCarrito:hover {
+  transform: rotate(10deg) scale(1.05);
+  filter: drop-shadow(0 0 6px #ffb0ff);
+}
+
+@keyframes navBar {
+  10% {
+    background-color: var(--color-main);
+  }
+  25% {
+    background-color: var(--color-main-transparent);
+  }
+  100% {
+    background-color: var(--color-main-transparent);
+  }
+}
+
+@media (max-width: 700px) {
+  .navBar_content > h1 {
+    text-align: center;
+  }
+
+  .navBar_content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

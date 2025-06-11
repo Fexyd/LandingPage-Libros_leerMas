@@ -1,0 +1,103 @@
+/* checkout.module.css */
+
+.container {
+  max-width: 480px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #46163a; /* color-text */
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-title, #ff0051);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.methodSelector {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.methodSelector label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.methodSelector input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: var(--color-main, #e494ff);
+  cursor: pointer;
+}
+
+.cardFields label,
+.bankFields label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.cardFields input,
+.bankFields input {
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+.cardFields input:focus,
+.bankFields input:focus {
+  outline: none;
+  border-color: var(--color-main-gradient, #b85ad7);
+  box-shadow: 0 0 5px var(--color-main-gradient, #b85ad7);
+}
+
+.error {
+  color: #ff0051;
+  font-weight: 700;
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.payButton {
+  background: var(--color-main, #e494ff);
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.payButton:hover:not(:disabled) {
+  background: var(--color-main-gradient, #b85ad7);
+}
+
+.payButton:disabled {
+  background: #d1b2eb;
+  cursor: not-allowed;
+  color: #7b679e;
+}

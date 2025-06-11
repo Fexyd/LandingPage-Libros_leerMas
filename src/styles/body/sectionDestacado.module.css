@@ -1,0 +1,35 @@
+.title {
+  color: var(--color-text);
+  font-family: "montserrat-alternate";
+  text-align: center;
+  padding-top: 2.5rem;
+  z-index: 100;
+}
+
+.section {
+  --margin: 3.5rem;
+
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 2rem;
+
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: 1fr; /* Solo 1 columna siempre */
+  grid-auto-rows: minmax(12rem, 19rem);
+  gap: 2rem 0;
+
+  place-items: center;
+}
+
+/* Puedes eliminar o mantener el media query, ya no afecta */
+@media (max-width: 700px) {
+  .section {
+    grid-template-columns: 1fr; /* 1 columna igual */
+    grid-auto-rows: auto; /* opcional para que filas se ajusten */
+    padding: 2rem 1rem;
+  }
+}
