@@ -15,7 +15,7 @@ function NavBarContent() {
   return (
     <div className={styles.navBar_content}>
       <h1>
-        Lecturas de <span className={styles.span}>Karol</span>
+        <span className={styles.span}>Leer Mas</span> - Tienda
       </h1>
       <NavBar
         count={3}

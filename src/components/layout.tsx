@@ -119,10 +119,7 @@ export default function Layout() {
       >
         <Form />
         <div style={{ marginTop: "2rem", opacity: 0.6 }}>
-          <p>
-            © {new Date().getFullYear()} Diseñado por <strong>Karol</strong> con
-            mucho cariño.
-          </p>
+          <p>© {new Date().getFullYear()} copyright</p>
         </div>
 
         <span
