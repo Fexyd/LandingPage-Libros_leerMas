@@ -1,5 +1,5 @@
 import acelerandoEnRojo from "./acelerandoEnRojo.jpeg";
-import demian from "./demian.jpeg";
+import demian from "./Demian.jpeg";
 import despuesDiciembre from "./despuesDiciembre.jpeg";
 import elArteDeSerNosotros from "./elArteDeSerNosotros.jpeg";
 import elChicoDeArriba from "./elChicoDeArriba.jpeg";
